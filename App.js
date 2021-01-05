@@ -3,10 +3,11 @@ import React, { useState } from "react";
 import { StyleSheet, Text, View, Button, TextInput, Image } from "react-native";
 
 export default function App() {
+  let inputText = 'Type something';
   const image =
     "https://s3.amazonaws.com/pix.iemoji.com/images/emoji/apple/ios-12/256/thumbs-up.png";
 
-  const buttonPressed = () => console.log("PRESSED THE BUTTON");
+  const buttonPressed = () => console.log(inputText);
 
   return (
     <View style={styles.container}>
@@ -35,6 +36,7 @@ export default function App() {
           }}
           placeholder="Initial Text"
           multiline={true}
+          onChangeText={(text) => inputText = text}
         />
       </View>
 
@@ -63,7 +65,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
   headlineBox: {
-    backgroundColor: "lightblue",
+    backgroundColor: "#A8D1E7",
     width: "100%",
     height: "18%",
     justifyContent: "center",
